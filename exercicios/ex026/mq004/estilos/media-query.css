@@ -11,10 +11,7 @@
 }
 
 body {
-    height: 100vh;
-}
-
-body {
+    height: 96.9vh;
     background: black url('../imagens/back-phone.jpg') no-repeat;
     background-size: cover;
     background-position: center;
@@ -43,4 +40,94 @@ h1 {
 img {
     display: block;
     margin: auto;
+}
+
+/* Todas as demais medias */
+
+/* Tipical Device Breakpoints
+-----------------------------
+Pequenas telas: até 600px
+
+Celular: de 600 até 768px;
+Tablet: de 768 até 992px;
+Desktop: 992 até 1200px;
+Grandes Telas: Acima de 1200px;
+
+*/
+
+@media print {
+    #phone {
+        display: none;
+    }
+
+    #print {
+        display: block;
+    }
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url('../imagens/back-print.jpg'); /* Desnecessário pois não aparece na impressão */
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: "Essa impressão foi feita através do site www.xzera.com.br";
+        text-decoration: overline;
+    }
+
+    h1 {
+        text-shadow: none;
+        color: #000;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /* TABLET */
+    #phone {
+        display: none;
+    }
+
+    #tablet {
+        display: block;
+    }
+
+    body {
+        background-image: url('../imagens/back-tablet.jpg');
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /* DESKTOP */
+    #phone {
+        display: none;
+    }
+
+    #pc {
+        display: block;
+    }
+    body {
+        background-image: url('../imagens/back-pc.jpg');
+    }
+}
+
+@media screen and (min-width: 1200px) { /* TELAS GRANDES */
+    main {
+        width: 700px;
+    }
+
+    #phone {
+        display: none;
+    }
+
+    #tv {
+        display: block;
+    }
+    body {
+        background-image: url('../imagens/back-tv.jpg');
+    }
 }
