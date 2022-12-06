@@ -23,9 +23,9 @@ header h1 {
     display: block;
     color: #fff;
     padding: 10px;
-    border-top: 2px solid #000;
     text-align: center;
     background-color: rgb(48, 48, 48);
+    transition: .9s;
 }
 
 #burguer:hover {
